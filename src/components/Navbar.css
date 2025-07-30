@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=Winky+Rough:ital,wght@0,300..900;1,300..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: serif;
+    box-sizing: border-box;
+}
+
+.navbar {
+    background-color: black;
+    padding: 10px 10px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 0 20px;
+    position: relative;
+}
+
+.nav-heading a {
+    text-decoration: none;
+    font-size: 25px;
+    font-weight: 600;
+    color: #e50914;
+    transition: color 1s ease-in;
+}
+
+.nav-heading a:hover {
+    color: white;
+    cursor: pointer;
+}
+
+.nav-item {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    padding-top: 5px;
+}
+
+.nav-list .nav-link {
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    color: white;
+    transition: color 1s ease-in;
+}
+
+.nav-list .nav-link:hover {
+    color: #e50914;
+    cursor: pointer;
+}
+
+.icons {
+    display: none;
+}
+
+/* Hide icons by default on large screen */
+.bar-icon,
+.cross-icon {
+    display: none;
+    font-size: 25px;
+    color: white;
+    cursor: pointer;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .icons {
+        display: block;
+    }
+
+    .nav-item {
+        display: none;
+        flex-direction: column;
+        background-color: black;
+        position: absolute;
+        top: 44px;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+        z-index: 10;
+    }
+
+    .nav-item.show-menu {
+        display: flex;
+    }
+
+    .bar-icon,
+    .cross-icon {
+        display: block;
+    }
+
+    .bar-icon.hide,
+    .cross-icon.hide {
+        display: none;
+    }
+}
+
+/* header-part design */
+
+.header-movie {
+    background-image: url(../assets/images/bg-movie.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    height: 80vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.header-movie h1 {
+    font-size: 45px;
+    font-family: "Winky Rough", sans-serif;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+}
+
+.header-movie p {
+    font-size: 18px;
+    color: white;
+    text-align: center;
+    padding-top: 5px;
+}
+
+.header-movie .btn {
+    text-align: center;
+    padding-top: 10px;
+}
+
+.header-movie button {
+    padding: 10px 10px;
+    background-color: white;
+    color: #e50914;
+    font-size: 20px;
+    font-family: "Winky Rough", sans-serif;
+    font-weight: 600;
+    border-radius: 25px;
+    border: none;
+}
+
+/* ======= Responsive Media Queries ======= */
+
+/* Tablets */
+@media (max-width: 992px) {
+    .header-movie {
+        height: 70vh;
+    }
+
+    .header-movie h1 {
+        font-size: 35px;
+    }
+
+    .header-movie p {
+        font-size: 16px;
+    }
+
+    .header-movie button {
+        font-size: 18px;
+        padding: 9px 18px;
+    }
+}
+
+/* Mobiles */
+@media (max-width: 768px) {
+    .header-movie {
+        height: 65vh;
+        padding: 0 10px;
+    }
+
+    .header-movie h1 {
+        font-size: 28px;
+    }
+
+    .header-movie p {
+        font-size: 15px;
+    }
+
+    .header-movie button {
+        font-size: 16px;
+        padding: 8px 16px;
+    }
+}
+
+/* Jio Phone or very small screens */
+@media (max-width: 480px) {
+    .header-movie {
+        height: auto;
+        padding: 20px 10px;
+    }
+
+    .header-movie h1 {
+        font-size: 24px;
+    }
+
+    .header-movie p {
+        font-size: 14px;
+    }
+
+    .header-movie button {
+        font-size: 14px;
+        padding: 8px 14px;
+    }
+}
