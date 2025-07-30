@@ -13,7 +13,7 @@ function App() {
 
   const handleSearch = async (query) => {
     const apiKey = "e3babe27"; // ← Replace with your OMDb API Key
-    const response = await fetch(`https://www.omdbapi.com/?s=${process.env.REACT_APP_OMDB_API_KEY}&apikey=e3babe27`);
+    const response = await fetch(`https://www.omdbapi.com/?s=${query}&apikey=e3babe27`);
     const data = await response.json();
 
     if (data.Response === "True") {
